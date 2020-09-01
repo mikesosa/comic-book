@@ -7,6 +7,7 @@ const getComics = async () => {
       url: `https://comicvine.gamespot.com/api/issues/?api_key=${process.env.REACT_APP_COMICVINE_API_KEY}&format=json`,
     }).catch((err) => {
       console.error("There is a problem with the API", err);
+      alert("Please activate CORS");
       return err;
     });
     return comicsData;
