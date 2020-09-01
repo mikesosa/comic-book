@@ -4,10 +4,9 @@ const getComics = async () => {
   const getInfo = async () => {
     const comicsData = await axios({
       method: "GET",
-      url: `https://comicvine.gamespot.com/api/issues/?api_key=${process.env.REACT_APP_COMICVINE_API_KEY}&format=json`,
+      url: `https://cors-anywhere.herokuapp.com/https://comicvine.gamespot.com/api/issues/?api_key=${process.env.REACT_APP_COMICVINE_API_KEY}&format=json`,
     }).catch((err) => {
       console.error("There is a problem with the API", err);
-      alert("Please activate CORS");
       return err;
     });
     return comicsData;
@@ -20,7 +19,7 @@ const getSingleComic = async (id) => {
   const getInfo = async () => {
     const comicData = await axios({
       method: "GET",
-      url: `https://comicvine.gamespot.com/api/issue/${id}/?api_key=${process.env.REACT_APP_COMICVINE_API_KEY}&format=json`,
+      url: `https://cors-anywhere.herokuapp.com/https://comicvine.gamespot.com/api/issue/${id}/?api_key=${process.env.REACT_APP_COMICVINE_API_KEY}&format=json`,
     }).catch((err) => {
       console.error("There is a problem with the API", err);
       return err;
