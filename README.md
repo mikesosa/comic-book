@@ -1,5 +1,7 @@
 ## Comic Book Application
 
+`IMPORTANT: If you are running it from localhost please consider using a CORS plugin, otherwise it wont work`
+
 This technical test consists of developing a web application that consumes the restful API of Comic Vine which is the largest comic database online.
 
 #### You should build a web application the following requirements:
