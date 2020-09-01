@@ -1,2 +1,9 @@
 .header {
+  a {
+    color: #333;
+    &:hover {
+      text-decoration: none;
+      color: #333;
+    }
+  }
 }

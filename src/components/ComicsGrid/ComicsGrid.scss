@@ -1,0 +1,15 @@
+.movies-grid {
+  padding: 2rem 3rem;
+  .card-columns {
+    column-count: 4;
+    @media only screen and (max-width: 600px) {
+      column-count: 2;
+      padding: 0rem;
+    }
+    .card {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}

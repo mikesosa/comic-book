@@ -7,5 +7,13 @@ $theme-colors: (
 body {
   background-color: whitesmoke !important;
 }
+.dashboard {
+  padding: 2rem 7rem !important;
+  @media only screen and (max-width: 600px) {
+    padding: 0rem !important;
+  }
+}
+
 /* import bootstrap to set changes */
 @import "~bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/mixins/breakpoints";

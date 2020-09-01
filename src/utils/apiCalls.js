@@ -15,4 +15,34 @@ const getComics = async () => {
   return result.data.results;
 };
 
-export { getComics };
+const getSingleComic = async (id) => {
+  const getInfo = async () => {
+    const comicData = await axios({
+      method: "GET",
+      url: `https://comicvine.gamespot.com/api/issue/${id}/?api_key=${process.env.REACT_APP_COMICVINE_API_KEY}&format=json`,
+    }).catch((err) => {
+      console.error("There is a problem with the API", err);
+      return err;
+    });
+    return comicData;
+  };
+  let result = await getInfo();
+  return result.data.results;
+};
+
+const getSingleComicDetail = async (url) => {
+  const getInfo = async () => {
+    const comicData = await axios({
+      method: "GET",
+      url: `${url}/?api_key=${process.env.REACT_APP_COMICVINE_API_KEY}`,
+    }).catch((err) => {
+      console.error("There is a problem with the API", err);
+      return err;
+    });
+    return comicData;
+  };
+  let result = await getInfo();
+  return result.data;
+};
+
+export { getComics, getSingleComic, getSingleComicDetail };

@@ -1,0 +1,25 @@
+.comics-list {
+  padding: 2rem 3rem;
+  .comic-row {
+    padding: 2rem 8rem;
+    border-bottom: 1px solid gainsboro;
+    img {
+      max-height: 20rem;
+      cursor: pointer;
+    }
+    .card {
+      background-color: transparent;
+      border: none;
+      h5 {
+        cursor: pointer;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    padding: 0rem !important;
+    .comic-row {
+      padding: 0rem;
+    }
+  }
+}

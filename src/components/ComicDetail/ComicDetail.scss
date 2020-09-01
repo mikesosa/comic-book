@@ -1,0 +1,9 @@
+.comic-detail {
+  padding: 2rem 10rem;
+  img {
+    max-height: 28rem;
+  }
+  @media only screen and (max-width: 600px) {
+    padding: 1rem 2rem;
+  }
+}
