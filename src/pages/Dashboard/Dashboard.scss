@@ -1,0 +1,11 @@
+/* make the customizations */
+$theme-colors: (
+  "info": tomato,
+  "danger": teal,
+);
+
+body {
+  background-color: whitesmoke !important;
+}
+/* import bootstrap to set changes */
+@import "~bootstrap/scss/bootstrap";
